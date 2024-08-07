@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Sign Up Title -->
+    <TextView
+        android:id="@+id/tv_signup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tv_signup_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It's quick and easy."
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <!-- First Name -->
+    <EditText
+        android:id="@+id/et_first_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="First name"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/et_surname"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <!-- Surname -->
+    <EditText
+        android:id="@+id/et_surname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Surname"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup_subtitle"
+        app:layout_constraintStart_toEndOf="@id/et_first_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <!-- Mobile or Email -->
+    <EditText
+        android:id="@+id/et_mobile_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Mobile number or email address"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/et_first_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1.0"/>
+
+    <!-- New Password -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="New password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/et_mobile_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1.0"/>
+
+    <!-- Date of Birth -->
+    <TextView
+        android:id="@+id/tv_dob_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of birth"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Day Spinner -->
+    <Spinner
+        android:id="@+id/spinner_day"
+        android:layout_width="0dp"
+        android:entries="@array/days_array"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"/>
+
+    <!-- Month Spinner -->
+    <Spinner
+        android:id="@+id/spinner_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/months_array"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob_label"
+        app:layout_constraintStart_toEndOf="@id/spinner_day"
+        app:layout_constraintWidth_percent="0.4"/>
+
+    <!-- Year Spinner -->
+    <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/years_array"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob_label"
+        app:layout_constraintStart_toEndOf="@id/spinner_month"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.3"/>
+
+    <!-- Gender Label -->
+    <TextView
+        android:id="@+id/tv_gender_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/spinner_day"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--  RadioButton -->
+    <RadioGroup
+        android:id="@+id/rg_gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_gender_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1.0">
+
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+    </RadioGroup>
+
+    <!-- Terms and Conditions -->
+    <TextView
+        android:id="@+id/tv_terms_conditions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="12sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/rg_gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_design"
+        app:layout_constraintTop_toBottomOf="@id/tv_terms_conditions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

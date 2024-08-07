@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tv_signup_title" type="id" />
+    <item name="tv_signup_subtitle" type="id" />
+    <item name="et_first_name" type="id" />
+    <item name="et_surname" type="id" />
+    <item name="et_mobile_email" type="id" />
+    <item name="et_password" type="id" />
+    <item name="tv_dob_label" type="id" />
+    <item name="spinner_day" type="id" />
+    <item name="spinner_month" type="id" />
+    <item name="spinner_year" type="id" />
+    <item name="tv_gender_label" type="id" />
+    <item name="rg_gender" type="id" />
+    <item name="rb_female" type="id" />
+    <item name="rb_male" type="id" />
+    <item name="rb_custom" type="id" />
+    <item name="tv_terms_conditions" type="id" />
+    <item name="btn_signup" type="id" />
+</resources>
