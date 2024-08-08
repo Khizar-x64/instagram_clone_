@@ -1,31 +1,39 @@
 package com.example.instagram_clone_
-import android.graphics.Color
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.instagram_clone_.R.*
-import androidx.fragment.app.Fragment as Fragment
+import androidx.fragment.app.Fragment
+import com.example.instagram_clone_.R.id
+import com.example.instagram_clone_.R.layout
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(layout.activity_main)
-        val startLogo=findViewById<ImageView>(id.start_logo)
+
+        val StarterFragment=StarterFragment()
+        supportFragmentManager.beginTransaction().
+                add(id.main_Fragement_Container,StarterFragment).
+                commit()
+        /*val startLogo=findViewById<ImageView>(id.start_logo)
         startLogo.setOnClickListener()
         {
-            monotoneFragment(Login_Page_Fragement())
-        }
+           monotoneFragment(Login_Page_Fragement())
+
+        }*/
     }
 
-    private fun monotoneFragment(fragment: Fragment) {
+    /*private fun monotoneFragment(fragment: Fragment) {
         val fragmentManager=supportFragmentManager
         val fragmentTransaction=fragmentManager.beginTransaction()
+        fragmentTransaction.replace(id.Fragment_layout,fragment)
 
-        fragmentTransaction.replace(id.Fragement_layout,fragment)
         fragmentTransaction.commit()
-    }
+    }*/
+
+
+
 }
 
