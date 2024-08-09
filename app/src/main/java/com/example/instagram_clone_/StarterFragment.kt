@@ -1,6 +1,6 @@
 package com.example.instagram_clone_
 
-import android.annotation.SuppressLint
+
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -41,7 +41,7 @@ class StarterFragment : Fragment() {
        startLogo.setOnClickListener()
         {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.Starter_Page, fragment)
+                .replace(R.id.main_Fragement_Container, fragment)
                 .commit()
         }
         // Inflate the layout for this fragment
