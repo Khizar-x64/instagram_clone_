@@ -1,8 +1,6 @@
 package com.example.instagram_clone_
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.example.instagram_clone_.R.id
 import com.example.instagram_clone_.R.layout
 
@@ -13,27 +11,11 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(layout.activity_main)
 
-        val StarterFragment=StarterFragment()
+        val fragment=StarterFragment()
         supportFragmentManager.beginTransaction().
-                add(id.main_Fragement_Container,StarterFragment).
+                add(id.main_Fragement_Container,fragment).
                 commit()
-        /*val startLogo=findViewById<ImageView>(id.start_logo)
-        startLogo.setOnClickListener()
-        {
-           monotoneFragment(Login_Page_Fragement())
 
-        }*/
     }
-
-    /*private fun monotoneFragment(fragment: Fragment) {
-        val fragmentManager=supportFragmentManager
-        val fragmentTransaction=fragmentManager.beginTransaction()
-        fragmentTransaction.replace(id.Fragment_layout,fragment)
-
-        fragmentTransaction.commit()
-    }*/
-
-
-
 }
 
